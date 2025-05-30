@@ -9,34 +9,37 @@ public class ProgramEstoque {
 		
 		Estoque x = new Estoque();
 		
-		System.out.println("Nome do produto: ");
+		System.out.print("Enter product data:\nName: ");
 		x.name = sc.nextLine();
-		System.out.println("Preço do produto: ");
+		System.out.print("Price: ");
 		x.price = sc.nextDouble();
-		System.out.println("Quantidade em estoque do produto: ");
+		System.out.print("Quantity in stock: ");
 		x.quantity = sc.nextInt();
 		
-		System.out.println("Produto: " + x.name);
-		System.out.println("Quantidade estoque: " + x.quantity);
-		System.out.println("Preço: " + x.price);
-		System.out.println("Valor total no estoque: " + x.TotalValueInStock());
+		System.out.println("Product data: "+ x.name + ", $ " + x.price + ", " + x.quantity + " units, Total: $" + x.TotalValueInStock() + "\n");
 		
-		System.out.println("Digite um valor para entrada no estoque: ");
+		System.out.print("Enter the number of products to be added in stock: ");
 		int addQuantity = sc.nextInt();
+		
+		System.out.print("\n");
+		
 		x.AddProducts(addQuantity);
 		
-		System.out.println("Total do estoque agora: " + x.quantity);
+		System.out.println("Updated data: "+ x.name + ", $" + x.price + ", " + x.quantity + " units, Total: $" + x.TotalValueInStock() + "\n");
 		
 		
-		System.out.println("Digite um valor para retirada do estoque: ");
+		System.out.print("Enter the number of products to be removed from stock: ");
 		int withdrawQuantity = sc.nextInt();
+		
+		System.out.print("\n");
+		
 		while (withdrawQuantity > x.quantity) {
-			System.out.println("Quantidade indisponível para saque. Digite novamente: ");
+			System.out.println("Quantity is greater than the available stock. Try again: ");
 			withdrawQuantity = sc.nextInt();
 			}
 		x.RemoveProducts(withdrawQuantity);
 		
-		System.out.println("Total do estoque agora: " + x.quantity);
+		System.out.println("Updated data: "+ x.name + ", $" + x.price + ", " + x.quantity + " units, Total: $" + x.TotalValueInStock() + "\n");
 		
 		sc.close();
 	}
