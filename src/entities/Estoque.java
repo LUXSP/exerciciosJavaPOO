@@ -6,17 +6,15 @@ public class Estoque {
 	public double price;
 	public int quantity;
 	
-	public double TotalValueInStock() {
-		return (quantity * price);
+	public double totalValueInStock() {
+		return quantity * price;
 	}
 	
-	public void AddProducts(int addQuantity) {
-		quantity += addQuantity;
+	public void addProducts(int quantity) {
+		this.quantity += quantity;
 	}
 	
-	public void RemoveProducts(int withdrawQuantity) {
-		quantity -= withdrawQuantity;
+	public void removeProducts(int quantity) {
+		this.quantity -= quantity;
 	}
-
-	
 }
