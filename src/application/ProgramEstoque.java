@@ -15,6 +15,9 @@ public class ProgramEstoque {
 		System.out.print("Quantity in stock: ");
 		x.quantity = sc.nextInt();
 		
+		System.out.println(x);
+		
+	/*	
 		System.out.println("Product data: "+ x.name + ", $ " + x.price + ", " + x.quantity + " units, Total: $" + x.totalValueInStock() + "\n");
 		
 		System.out.print("Enter the number of products to be added in stock: ");
@@ -35,6 +38,7 @@ public class ProgramEstoque {
 		System.out.println("Updated data: "+ x.name + ", $" + x.price + ", " + x.quantity + " units, Total: $" + x.totalValueInStock() + "\n");
 		
 		sc.close();
+		*/
 	}
 
 }
