@@ -15,30 +15,39 @@ public class ProgramEstoque {
 		System.out.print("Quantity in stock: ");
 		x.quantity = sc.nextInt();
 		
-		System.out.println(x);
+		System.out.println("Product data: " + x);
 		
-	/*	
-		System.out.println("Product data: "+ x.name + ", $ " + x.price + ", " + x.quantity + " units, Total: $" + x.totalValueInStock() + "\n");
-		
+			
+		System.out.print("\n");
 		System.out.print("Enter the number of products to be added in stock: ");
-		x.quantity = sc.nextInt();
+		int quantity = sc.nextInt();
 		
 		System.out.print("\n");
 		
-		x.addProducts(x.quantity);
+		x.addProducts(quantity);
 		
-		System.out.println("Updated data: "+ x.name + ", $" + x.price + ", " + x.quantity + " units, Total: $" + x.totalValueInStock() + "\n");
-		
+		System.out.println("Updated data: " + x);
+		System.out.print("\n");
 		
 		System.out.print("Enter the number of products to be removed from stock: ");
-		x.quantity = sc.nextInt();
+		quantity = sc.nextInt();
+		System.out.print("\n");
+		
+		while (quantity > x.quantity) {
+			System.out.println("Quantity is greater than the available stock. Try again: ");
+			System.out.print("\n");
+			System.out.print("Enter the number of products to be removed from stock: ");
+			quantity = sc.nextInt();
+			System.out.println("\n");
+			}
+		x.removeProducts(quantity);
 		
 		System.out.print("\n");
 		
 		System.out.println("Updated data: "+ x.name + ", $" + x.price + ", " + x.quantity + " units, Total: $" + x.totalValueInStock() + "\n");
 		
 		sc.close();
-		*/
+	
 	}
 
 }
